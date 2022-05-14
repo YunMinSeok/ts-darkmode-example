@@ -4,8 +4,14 @@
     "module": "commonjs",
     "strict": true,
     "esModuleInterop": true,
-    "outDir": "dist"
+    "outDir": "dist",
+    "jsx": "react"
   },
-  "include": ["src/**/*"],
+  "include": [
+    "src/component/Introduction.tsx",
+    "src/component/HowToUse.tsx",
+    "src/component/GettingStart.tsx",
+    "src/component/Contributors.tsx"
+  ],
   "exclude": ["node_modules"]
 }
