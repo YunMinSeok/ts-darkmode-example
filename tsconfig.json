@@ -5,7 +5,8 @@
     "strict": true,
     "esModuleInterop": true,
     "outDir": "dist",
-    "jsx": "react"
+    "jsx": "react",
+    "moduleResolution": "node"
   },
   "include": [
     "src/component/Introduction.tsx",
