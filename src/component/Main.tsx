@@ -11,10 +11,17 @@ export default function Main() {
         <ImgWarp>
           <img src={darkmode_icon} alt="icon" />
         </ImgWarp>
-        <ContentsTextWarp>
+        <ContentsTextWrap>
           <ContentsTitle>@ysms/ts-darkmode</ContentsTitle>
-          <ContentsDesc>👀How about change your web to darkmode</ContentsDesc>
-        </ContentsTextWarp>
+          <ContentsDesc>👀How about change your web to darkmode?</ContentsDesc>
+        </ContentsTextWrap>
+        <ConstentsUrlWrap>
+          <ContentsDesc>
+            <a href="https://github.com/YunMinSeok/darkmodejs">
+              Go to Repositories
+            </a>
+          </ContentsDesc>
+        </ConstentsUrlWrap>
       </ContentsWrap>
     </div>
   );
@@ -43,5 +50,12 @@ const ContentsDesc: StyledComponent<"p", DefaultTheme> = styled.p`
   margin: 0;
   font-size: 1.19vw;
   color: #707070;
+  &a {
+    color: #707070;
+    text-decoration: none;
+  }
 `;
-const ContentsTextWarp: StyledComponent<"div", DefaultTheme> = styled.div``;
+const ContentsTextWrap: StyledComponent<"div", DefaultTheme> = styled.div``;
+const ConstentsUrlWrap: StyledComponent<"div", DefaultTheme> = styled.div`
+  padding-top: 4vw;
+`;
