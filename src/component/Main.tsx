@@ -49,10 +49,19 @@ const ContentsTitle: StyledComponent<"p", DefaultTheme> = styled.p`
 const ContentsDesc: StyledComponent<"p", DefaultTheme> = styled.p`
   margin: 0;
   font-size: 1.19vw;
-  color: #707070;
-  &a {
-    color: #707070;
-    text-decoration: none;
+  color: #1d1d1d;
+  > a {
+    color: #1d1d1d;
+    text-decoration-line: none;
+  }
+  > a:link {
+    color: #1d1d1d;
+  }
+  > a:active {
+    color: #1d1d1d;
+  }
+  > a:visited {
+    color: #1d1d1d;
   }
 `;
 const ContentsTextWrap: StyledComponent<"div", DefaultTheme> = styled.div``;
