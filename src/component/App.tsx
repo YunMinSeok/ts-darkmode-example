@@ -1,5 +1,6 @@
 import "./App.css";
 import * as React from "react";
+import GlobalStyles from "../css/GlobalStyles";
 
 import Main from "./Main";
 import Introduction from "./Introduction";
@@ -10,6 +11,7 @@ import Contributors from "./Contributors";
 function App() {
   return (
     <div className="App">
+      <GlobalStyles />
       <Main />
       <Introduction />
       <GettingStart />
