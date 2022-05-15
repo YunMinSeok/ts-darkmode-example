@@ -13,7 +13,7 @@ export default function Main() {
         </ImgWarp>
         <ContentsTextWarp>
           <ContentsTitle>@ysms/ts-darkmode</ContentsTitle>
-          <ContentsDesc>👀How about change your web to darkmode?</ContentsDesc>
+          <ContentsDesc>👀How about change your web to darkmode</ContentsDesc>
         </ContentsTextWarp>
       </ContentsWrap>
     </div>
