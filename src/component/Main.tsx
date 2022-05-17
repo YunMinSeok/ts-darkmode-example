@@ -1,16 +1,13 @@
 import * as React from "react";
 import styled, { DefaultTheme, StyledComponent } from "styled-components";
 
-// import icon
-import darkmode_icon from "../imgs/darkmode_icon.png";
-
 export default function Main() {
   return (
     <div>
       <ContentsWrap>
-        <ImgWarp>
-          <img src={darkmode_icon} alt="icon" />
-        </ImgWarp>
+        <IconWarp>
+          <ToggleButton></ToggleButton>
+        </IconWarp>
         <ContentsTextWrap>
           <ContentsTitle>@ysms/ts-darkmode</ContentsTitle>
           <ContentsDesc>👀 How about change your web to darkmode?</ContentsDesc>
@@ -26,15 +23,15 @@ export default function Main() {
     </div>
   );
 }
-const ImgWarp: StyledComponent<"div", DefaultTheme> = styled.div`
-  width: 10.7vw;
-  height: 10.7vw;
+const IconWarp: StyledComponent<"div", DefaultTheme> = styled.div`
   text-align: center;
   margin: 0 auto;
-  & img {
-    width: 100%;
-    height: 100%;
-  }
+`;
+const ToggleButton: StyledComponent<"button", DefaultTheme> = styled.button`
+  width: 10.7vw;
+  height: 10.7vw;
+  border-radius: 25%;
+  background-color: black;
 `;
 const ContentsWrap: StyledComponent<"div", DefaultTheme> = styled.div`
   text-align: center;
