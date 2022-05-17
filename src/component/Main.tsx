@@ -30,7 +30,7 @@ const IconWarp: StyledComponent<"div", DefaultTheme> = styled.div`
 const ToggleButton: StyledComponent<"button", DefaultTheme> = styled.button`
   width: 10.7vw;
   height: 10.7vw;
-  border-radius: 25%;
+  border-radius: 80%;
   background-color: black;
 `;
 const ContentsWrap: StyledComponent<"div", DefaultTheme> = styled.div`
