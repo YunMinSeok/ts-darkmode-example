@@ -3,24 +3,22 @@ import styled, { DefaultTheme, StyledComponent } from "styled-components";
 
 export default function Main() {
   return (
-    <div>
-      <ContentsWrap>
-        <IconWarp>
-          <ToggleButton></ToggleButton>
-        </IconWarp>
-        <ContentsTextWrap>
-          <ContentsTitle>@ysms/ts-darkmode</ContentsTitle>
-          <ContentsDesc>👀 How about change your web to darkmode?</ContentsDesc>
-        </ContentsTextWrap>
-        <ConstentsUrlWrap>
-          <ContentsDesc>
-            <a href="https://github.com/YunMinSeok/darkmodejs">
-              Go to Repositories
-            </a>
-          </ContentsDesc>
-        </ConstentsUrlWrap>
-      </ContentsWrap>
-    </div>
+    <ContentsWrap>
+      <IconWarp>
+        <ToggleButton></ToggleButton>
+      </IconWarp>
+      <ContentsTextWrap>
+        <ContentsTitle>@ysms/ts-darkmode</ContentsTitle>
+        <ContentsDesc>👀 How about change your web to darkmode?</ContentsDesc>
+      </ContentsTextWrap>
+      <ConstentsUrlWrap>
+        <ContentsDesc>
+          <a href="https://github.com/YunMinSeok/darkmodejs">
+            Go to Repositories
+          </a>
+        </ContentsDesc>
+      </ConstentsUrlWrap>
+    </ContentsWrap>
   );
 }
 const IconWarp: StyledComponent<"div", DefaultTheme> = styled.div`
