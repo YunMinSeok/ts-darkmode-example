@@ -24,7 +24,7 @@ export default function GettingStarted() {
   );
 }
 const ComponentWrap: StyledComponent<"div", DefaultTheme> = styled.div`
-  padding: 6vw;
+  padding: 0 6vw 6vw;
 `;
 const IntroTitle: StyledComponent<"h1", DefaultTheme> = styled.h1`
   text-align: left;
