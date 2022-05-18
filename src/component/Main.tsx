@@ -8,16 +8,28 @@ export default function Main() {
     const contents: HTMLDivElement = event.currentTarget;
     contents.style.fontWeight = "bold";
   };
-  const contentsMousehleaveHandler = (
+  const contentsMouseleaveHandler = (
     event: React.MouseEvent<HTMLDivElement>
   ) => {
     const contents: HTMLDivElement = event.currentTarget;
     contents.style.fontWeight = "500";
   };
+  const circleMousehoverHandler = (event: React.MouseEvent<HTMLDivElement>) => {
+    const circleImg: HTMLDivElement = event.currentTarget.children;
+    circleImg.style.width = "15vw";
+    circleImg.style.height = "15vw";
+  };
+  const circleMouseleaveHandler = (event: React.MouseEvent<HTMLDivElement>) => {
+    const circleImg: HTMLDivElement = event.currentTarget.children;
+    circleImg.style.width = "10vw";
+    circleImg.style.height = "10vw";
+  };
   return (
     <ContentsWrap>
       <IconWarp>
         <ToggleButton
+          onMouseOver={circleMousehoverHandler}
+          onMouseLeave={circleMouseleaveHandler}
           onClick={() => {
             console.log("button click");
           }}
@@ -32,7 +44,7 @@ export default function Main() {
       <ConstentsUrlWrap>
         <ContentsDesc
           onMouseOver={contentsMousehoverHandler}
-          onMouseLeave={contentsMousehleaveHandler}
+          onMouseLeave={contentsMouseleaveHandler}
         >
           <a href="https://github.com/YunMinSeok/darkmodejs">
             Go to Repositories
@@ -44,10 +56,10 @@ export default function Main() {
 }
 const IconWarp = styled.div`
   text-align: center;
-  margin: 0 auto;
   padding-bottom: 3vw;
 `;
-const ToggleButton = styled.button`
+const ToggleButton = styled.div`
+  margin: 0 auto;
   width: 7vw;
   position: relative;
   height: 7vw;
