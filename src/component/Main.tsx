@@ -1,9 +1,5 @@
 import * as React from "react";
-import styled, {
-  DefaultTheme,
-  keyframes,
-  StyledComponent,
-} from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export default function Main() {
   const contentsMousehoverHandler = (
@@ -46,12 +42,12 @@ export default function Main() {
     </ContentsWrap>
   );
 }
-const IconWarp: StyledComponent<"div", DefaultTheme> = styled.div`
+const IconWarp = styled.div`
   text-align: center;
   margin: 0 auto;
   padding-bottom: 3vw;
 `;
-const ToggleButton: StyledComponent<"button", DefaultTheme> = styled.button`
+const ToggleButton = styled.button`
   width: 7vw;
   position: relative;
   height: 7vw;
@@ -59,17 +55,17 @@ const ToggleButton: StyledComponent<"button", DefaultTheme> = styled.button`
   background-color: #fff;
   border: #fff;
 `;
-const ContentsWrap: StyledComponent<"div", DefaultTheme> = styled.div`
+const ContentsWrap = styled.div`
   text-align: center;
   margin-top: 11.7vw;
   padding-bottom: 4vw;
 `;
-const ContentsTitle: StyledComponent<"p", DefaultTheme> = styled.p`
+const ContentsTitle = styled.p`
   margin-bottom: 1.19vw;
   font-size: 2.7vw;
   font-weight: bold;
 `;
-const ContentsDesc: StyledComponent<"p", DefaultTheme> = styled.p`
+const ContentsDesc = styled.p`
   margin: 0;
   font-size: 1.19vw;
   color: #1d1d1d;
@@ -87,25 +83,109 @@ const ContentsDesc: StyledComponent<"p", DefaultTheme> = styled.p`
     color: #1d1d1d;
   }
 `;
-const ContentsTextWrap: StyledComponent<"div", DefaultTheme> = styled.div``;
-const ConstentsUrlWrap: StyledComponent<"div", DefaultTheme> = styled.div`
+const ContentsTextWrap = styled.div``;
+const ConstentsUrlWrap = styled.div`
   padding-top: 4vw;
 `;
-const ImageCircle: StyledComponent<"div", DefaultTheme> = styled.div`
+
+// button animation
+const rotate = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+  
+  to {
+    transform: rotate(360deg);
+  }
+`;
+
+const border1 = keyframes`
+ 0%, 100% {
+    border-top-left-radius: 7vw;
+  }
+  
+  25% {
+    border-top-left-radius: 6vw;
+  }
+  
+  50% {
+    border-top-left-radius: 6vw;
+  }
+  
+  75% {
+    border-top-left-radius: 8vw;
+  }
+`;
+
+const border2 = keyframes`
+ 0%, 100% {
+    border-top-right-radius: 7vw;
+  }
+  
+  25% {
+    border-top-right-radius: 6vw;
+  }
+  
+  50% {
+    border-top-right-radius: 7vw;
+  }
+  
+  75% {
+    border-top-right-radius: 8vw;
+  }
+`;
+
+const border3 = keyframes`
+  0%, 100% {
+    border-bottom-right-radius: 7vw;
+  }
+  
+  25% {
+    border-bottom-right-radius: 8vw;
+  }
+  
+  50% {
+    border-bottom-right-radius: 6vw;
+  }
+  
+  75% {
+    border-bottom-right-radius: 10vw;
+  }
+`;
+
+const borderbl = keyframes`
+ 0%, 100% {
+    border-bottom-left-radius: 7vw;
+  }
+  
+  25% {
+    border-bottom-left-radius: 10vw;
+  }
+  
+  50% {
+    border-bottom-left-radius: 6vw;
+  }
+  
+  75% {
+    border-bottom-left-radius: 8vw;
+  }
+`;
+
+const ImageCircle = styled.div`
   position: absolute;
   pointer-events: none;
   background-color: #1d1d1d;
   top: -15%;
   left: -15%;
   display: inline-block;
-  width: 8vw;
-  height: 8vw;
+  width: 10vw;
+  height: 10vw;
   border-radius: 80%;
   box-shadow: inset 0 0 0 2px #1d1d1d;
   z-index: -1;
   filter: blur(1rem);
 
-  animation: 3s bordertl linear infinite, 4s border1 linear infinite,
-    6s border2 linear infinite, 3s border3 linear infinite,
-    3s rotate linear infinite, 2s hover ease-in-out infinite;
+  animation: 3s ${borderbl} linear infinite, 7s ${border1} linear infinite,
+    5s ${border2} linear infinite, 3s ${border3} linear infinite,
+    3s ${rotate} linear infinite, 2s hover ease-in-out infinite;
 `;
