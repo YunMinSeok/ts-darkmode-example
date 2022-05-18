@@ -94,7 +94,7 @@ const ConstentsUrlWrap: StyledComponent<"div", DefaultTheme> = styled.div`
 const ImageCircle: StyledComponent<"div", DefaultTheme> = styled.div`
   position: absolute;
   pointer-events: none;
-  background-color: #868686;
+  background-color: #1d1d1d;
   top: -15%;
   left: -15%;
   display: inline-block;
