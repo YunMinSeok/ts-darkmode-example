@@ -21,8 +21,9 @@ export default function Main() {
   return (
     <ContentsWrap>
       <IconWarp>
-        <ToggleButton></ToggleButton>
-        {/* <imageCircle></imageCircle> */}
+        <ToggleButton>
+          <ImageCircle></ImageCircle>
+        </ToggleButton>
       </IconWarp>
       <ContentsTextWrap>
         <ContentsTitle>@ysms/ts-darkmode</ContentsTitle>
@@ -44,12 +45,15 @@ export default function Main() {
 const IconWarp: StyledComponent<"div", DefaultTheme> = styled.div`
   text-align: center;
   margin: 0 auto;
+  padding-bottom: 3vw;
 `;
 const ToggleButton: StyledComponent<"button", DefaultTheme> = styled.button`
-  width: 10.7vw;
-  height: 10.7vw;
+  width: 7vw;
+  position: relative;
+  height: 7vw;
   border-radius: 80%;
-  background-color: black;
+  background-color: #fff;
+  border: #fff;
 `;
 const ContentsWrap: StyledComponent<"div", DefaultTheme> = styled.div`
   text-align: center;
@@ -83,21 +87,21 @@ const ContentsTextWrap: StyledComponent<"div", DefaultTheme> = styled.div``;
 const ConstentsUrlWrap: StyledComponent<"div", DefaultTheme> = styled.div`
   padding-top: 4vw;
 `;
-// const imageCircle: StyledComponent<"div", DefaultTheme> = styled.div`
-//   position: absolute;
-//   top: 26%;
-//   left: 36.5%;
-//   width: 30rem;
-//   animation: spinCircle 30s linear infinite;
-//   opacity: 0.1;
-// `;
-// const spinCircle = keyframes`
-//   @keyframes spinCircle {
-//     from {
-//       transform: rotate(0);
-//     }
-//     to {
-//       transform: rotate(360deg);
-//     }
-//   }
-// `;
+const ImageCircle: StyledComponent<"div", DefaultTheme> = styled.div`
+  position: absolute;
+  pointer-events: none;
+  background-color: #868686;
+  top: -15%;
+  left: -15%;
+  display: inline-block;
+  width: 8vw;
+  height: 8vw;
+  border-radius: 80%;
+  box-shadow: inset 0 0 0 2px #1d1d1d;
+  z-index: -1;
+  filter: blur(1rem);
+
+  animation: 3s bordertl linear infinite, 4s border1 linear infinite,
+    6s border2 linear infinite, 3s border3 linear infinite,
+    3s rotate linear infinite, 2s hover ease-in-out infinite;
+`;
