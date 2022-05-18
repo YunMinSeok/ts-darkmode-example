@@ -4,7 +4,7 @@ import GlobalStyles from "../css/GlobalStyles";
 
 import Main from "./Main";
 import Introduction from "./Introduction";
-import GettingStart from "./GettingStart";
+import GettingStarted from "./GettingStart";
 import HowToUse from "./HowToUse";
 import Contributors from "./Contributors";
 
@@ -14,7 +14,7 @@ function App() {
       <GlobalStyles />
       <Main />
       <Introduction />
-      <GettingStart />
+      <GettingStarted />
       <HowToUse />
       <Contributors />
     </div>

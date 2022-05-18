@@ -3,7 +3,7 @@ import styled, { DefaultTheme, StyledComponent } from "styled-components";
 
 export default function Introduction() {
   return (
-    <IntroWrap>
+    <ComponentWrap>
       <IntroTitle>#Introduction</IntroTitle>
       <IntroDesc>
         💡 Hello, This library helps you apply the Dark Mode feature to your web
@@ -20,10 +20,12 @@ export default function Introduction() {
         이 프로젝트는 TypeScript를 사용하였으며, 현재 이 웹은 TypeScript,
         React를 함께 사용하였습니다.
       </IntroDesc>
-    </IntroWrap>
+    </ComponentWrap>
   );
 }
-const IntroWrap: StyledComponent<"div", DefaultTheme> = styled.div``;
+const ComponentWrap: StyledComponent<"div", DefaultTheme> = styled.div`
+  padding: 0 6vw;
+`;
 const IntroTitle: StyledComponent<"h1", DefaultTheme> = styled.h1`
   text-align: left;
 `;
