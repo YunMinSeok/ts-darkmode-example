@@ -1,18 +1,38 @@
 import * as React from "react";
-import styled, { DefaultTheme, StyledComponent } from "styled-components";
+import styled, {
+  DefaultTheme,
+  keyframes,
+  StyledComponent,
+} from "styled-components";
 
 export default function Main() {
+  const contentsMousehoverHandler = (
+    event: React.MouseEvent<HTMLDivElement>
+  ) => {
+    const contents: HTMLDivElement = event.currentTarget;
+    contents.style.fontWeight = "bold";
+  };
+  const contentsMousehleaveHandler = (
+    event: React.MouseEvent<HTMLDivElement>
+  ) => {
+    const contents: HTMLDivElement = event.currentTarget;
+    contents.style.fontWeight = "500";
+  };
   return (
     <ContentsWrap>
       <IconWarp>
         <ToggleButton></ToggleButton>
+        {/* <imageCircle></imageCircle> */}
       </IconWarp>
       <ContentsTextWrap>
         <ContentsTitle>@ysms/ts-darkmode</ContentsTitle>
         <ContentsDesc>👀 How about change your web to darkmode?</ContentsDesc>
       </ContentsTextWrap>
       <ConstentsUrlWrap>
-        <ContentsDesc>
+        <ContentsDesc
+          onMouseOver={contentsMousehoverHandler}
+          onMouseLeave={contentsMousehleaveHandler}
+        >
           <a href="https://github.com/YunMinSeok/darkmodejs">
             Go to Repositories
           </a>
@@ -63,3 +83,21 @@ const ContentsTextWrap: StyledComponent<"div", DefaultTheme> = styled.div``;
 const ConstentsUrlWrap: StyledComponent<"div", DefaultTheme> = styled.div`
   padding-top: 4vw;
 `;
+// const imageCircle: StyledComponent<"div", DefaultTheme> = styled.div`
+//   position: absolute;
+//   top: 26%;
+//   left: 36.5%;
+//   width: 30rem;
+//   animation: spinCircle 30s linear infinite;
+//   opacity: 0.1;
+// `;
+// const spinCircle = keyframes`
+//   @keyframes spinCircle {
+//     from {
+//       transform: rotate(0);
+//     }
+//     to {
+//       transform: rotate(360deg);
+//     }
+//   }
+// `;
