@@ -21,7 +21,11 @@ export default function Main() {
   return (
     <ContentsWrap>
       <IconWarp>
-        <ToggleButton>
+        <ToggleButton
+          onClick={() => {
+            console.log("button click");
+          }}
+        >
           <ImageCircle></ImageCircle>
         </ToggleButton>
       </IconWarp>
