@@ -69,7 +69,7 @@ const ToggleButton = styled.div`
 `;
 const ContentsWrap = styled.div`
   text-align: center;
-  margin-top: 11.7vw;
+  padding-top: 11.7vw;
   padding-bottom: 4vw;
 `;
 const ContentsTitle = styled.p`
