@@ -10,9 +10,10 @@ import Contributors from "./Contributors";
 
 // add darkmode
 import Darkmode from "@ysms/ts-darkmode";
-new Darkmode({ content: "🌓" }).showWidget();
 
 function App() {
+  // show darkmode button
+  new Darkmode({ content: "🌓" }).showWidget();
   return (
     <div className="App">
       <GlobalStyles />

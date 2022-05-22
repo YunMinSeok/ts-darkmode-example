@@ -15,14 +15,14 @@ export default function Main() {
     contents.style.fontWeight = "500";
   };
   const circleMousehoverHandler = (event: React.MouseEvent<HTMLDivElement>) => {
-    const circleImg: HTMLDivElement = event.currentTarget.children;
-    circleImg.style.width = "15vw";
-    circleImg.style.height = "15vw";
+    // const circleImg: HTMLDivElement = event.currentTarget.children;
+    // circleImg.style.width = "15vw";
+    // circleImg.style.height = "15vw";
   };
   const circleMouseleaveHandler = (event: React.MouseEvent<HTMLDivElement>) => {
-    const circleImg: HTMLDivElement = event.currentTarget.children;
-    circleImg.style.width = "10vw";
-    circleImg.style.height = "10vw";
+    // const circleImg: HTMLDivElement = event.currentTarget.children;
+    // circleImg.style.width = "10vw";
+    // circleImg.style.height = "10vw";
   };
   return (
     <ContentsWrap>
