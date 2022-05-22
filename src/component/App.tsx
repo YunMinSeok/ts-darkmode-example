@@ -8,6 +8,10 @@ import GettingStarted from "./GettingStart";
 import HowToUse from "./HowToUse";
 import Contributors from "./Contributors";
 
+// add darkmode
+import Darkmode from "@ysms/ts-darkmode";
+new Darkmode({ content: "🌓" }).showWidget();
+
 function App() {
   return (
     <div className="App">
