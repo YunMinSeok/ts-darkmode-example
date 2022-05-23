@@ -1,6 +1,9 @@
 import * as React from "react";
 import styled, { keyframes } from "styled-components";
 
+// add darkmode
+import Darkmode from "@ysms/ts-darkmode";
+
 export default function Main() {
   const contentsMousehoverHandler = (
     event: React.MouseEvent<HTMLDivElement>
@@ -24,6 +27,10 @@ export default function Main() {
     // circleImg.style.width = "10vw";
     // circleImg.style.height = "10vw";
   };
+
+  const darkmode = new Darkmode({ content: "🌓" });
+  darkmode.showWidget();
+  console.log("test");
   return (
     <ContentsWrap>
       <IconWarp>
