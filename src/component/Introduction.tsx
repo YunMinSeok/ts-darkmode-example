@@ -6,8 +6,8 @@ export default function Introduction() {
     <ComponentWrap>
       <IntroTitle>#Introduction</IntroTitle>
       <IntroDesc>
-        💡 Hello, This library helps you apply the Dark Mode feature to your web
-        more easily.
+        <span className="darkmode-ignore">💡 </span> Hello, This library helps
+        you apply the Dark Mode feature to your web more easily.
       </IntroDesc>
       <IntroDesc>
         저희는 클라이언트의 요구에 맞춰 빠르게 다양한 기능을 구현해야하는 Si

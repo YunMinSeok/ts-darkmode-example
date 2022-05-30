@@ -9,8 +9,6 @@ import HowToUse from "./HowToUse";
 import Contributors from "./Contributors";
 
 function App() {
-  // show darkmode button
-  // new Darkmode({ content: "🌓" }).showWidget();
   return (
     <div className="App">
       <GlobalStyles />
