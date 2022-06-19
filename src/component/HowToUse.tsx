@@ -59,7 +59,7 @@ export default function HowToUse() {
         <CodeSection>
           buttonLightColor: "#fff", // Light mode button color
         </CodeSection>
-        <CodeSection>content: "🌓", // Content in button </CodeSection>
+        <CodeSection>content: "⭐️", // Content in button </CodeSection>
         <CodeSection>
           saveInCookies: true, // If you want to remember whether it's dark mode
           or not, write this section true or false
@@ -77,7 +77,7 @@ const ComponentWrap: StyledComponent<"div", DefaultTheme> = styled.div`
 const IntroSubTitle: StyledComponent<"h2", DefaultTheme> = styled.h2``;
 const CodeSection: StyledComponent<"pre", DefaultTheme> = styled.pre`
   padding: 0.5vw;
-  background-color: #d4d4d4ca;
+  /* background-color: #d4d4d4ca; */
 `;
 const CodeInfo: StyledComponent<"span", DefaultTheme> = styled.span`
   font-size: 80%;

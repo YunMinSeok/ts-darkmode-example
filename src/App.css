@@ -1,4 +1,8 @@
 .App {
   text-align: center;
-  font-size: 1vw;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: "Kanit", sans-serif;
+  line-height: 1.5;
+  color: #1d1d1d;
 }

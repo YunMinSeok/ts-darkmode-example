@@ -29,7 +29,10 @@ export default function Main() {
       </IconWarp>
       <ContentsTextWrap>
         <ContentsTitle>@ysms/ts-darkmode</ContentsTitle>
-        <ContentsDesc>👀 How about change your web to darkmode?</ContentsDesc>
+        <ContentsDesc>
+          <span className="darkmode-ignore">👀</span> How about change your web
+          to darkmode?
+        </ContentsDesc>
       </ContentsTextWrap>
       <ContentsUrlWrap>
         <ContentsDesc
@@ -46,30 +49,33 @@ export default function Main() {
 }
 const IconWarp = styled.div`
   text-align: center;
-  padding-bottom: 3vw;
+  padding-bottom: 120px;
 `;
 const ToggleButton = styled.div`
   margin: 0 auto;
-  width: 7vw;
+  width: 120px;
   position: relative;
-  height: 7vw;
+  height: 120px;
   border-radius: 80%;
   background-color: #fff;
   border: #fff;
 `;
 const ContentsWrap = styled.div`
   text-align: center;
-  padding-top: 11.7vw;
-  padding-bottom: 4vw;
+  padding-top: 150px;
+  padding-bottom: 120px;
 `;
 const ContentsTitle = styled.p`
-  margin-bottom: 1.19vw;
-  font-size: 2.7vw;
+  font-family: "Kanit", sans-serif;
+  font-weight: 700;
+  font-size: 80px;
   font-weight: bold;
 `;
 const ContentsDesc = styled.p`
+  display: inline-block;
   margin: 0;
-  font-size: 1.19vw;
+  font-size: 20px;
+  padding-top: 10px;
   color: #1d1d1d;
   > a {
     color: #1d1d1d;
@@ -87,7 +93,7 @@ const ContentsDesc = styled.p`
 `;
 const ContentsTextWrap = styled.div``;
 const ContentsUrlWrap = styled.div`
-  padding-top: 4vw;
+  padding-top: 15px;
 `;
 
 // button animation
@@ -177,11 +183,11 @@ const ImageCircle = styled.div`
   position: absolute;
   pointer-events: none;
   background-color: #1d1d1d;
-  top: -15%;
-  left: -15%;
+  top: -30px;
+  left: -30px;
   display: inline-block;
-  width: 10vw;
-  height: 10vw;
+  width: 200px;
+  height: 200px;
   border-radius: 80%;
   box-shadow: inset 0 0 0 2px #1d1d1d;
   z-index: -1;

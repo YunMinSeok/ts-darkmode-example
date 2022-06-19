@@ -29,7 +29,7 @@ const IntroTitle: StyledComponent<"h1", DefaultTheme> = styled.h1``;
 const IntroSubTitle: StyledComponent<"h2", DefaultTheme> = styled.h2``;
 const CodeSection: StyledComponent<"code", DefaultTheme> = styled.code`
   padding: 0.5vw;
-  background-color: #d4d4d4ca;
+  /* background-color: #d4d4d4ca; */
 `;
 const ContentsWrap: StyledComponent<"div", DefaultTheme> = styled.div`
   margin: 2vw;
