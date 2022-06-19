@@ -2,24 +2,71 @@ import * as React from "react";
 import styled, { DefaultTheme, StyledComponent } from "styled-components";
 
 export default function HowToUse() {
+  interface SettingInterface {
+    bottom: string;
+    right: string;
+    left: string;
+    transitionTime: string;
+    backgroundColor: string;
+    buttonDarkColor: string;
+    buttonLightColor: string;
+    content: string;
+    saveInCookies: boolean;
+    buttonWidth: string;
+    buttonHeight: string;
+  }
+  const settingOptions: SettingInterface = {
+    // it's all default value
+    bottom: "30px", // Button's bottom position
+    right: "30px", // You can choose between right and left
+    left: "unset",
+    transitionTime: "0.3s", // Transition Time
+    backgroundColor: "#fff", // Light mode background color setting
+    buttonDarkColor: "#141414", // Dark mode button color
+    buttonLightColor: "#fff", // Light mode button color
+    content: "🌓", // Content in button
+    saveInCookies: true, // If you want to remember whether it's dark mode or not, write this section true or false
+    buttonWidth: "3rem", // Button size
+    buttonHeight: "3rem", // Button size
+  };
   return (
     <ComponentWrap>
       <IntroTitle>#HowToUse</IntroTitle>
-      <IntroDesc>
-        💡 Hello, This library helps you apply the Dark Mode feature to your web
-        more easily.
-      </IntroDesc>
-      <IntroDesc>
-        저희는 클라이언트의 요구에 맞춰 빠르게 다양한 기능을 구현해야하는 Si
-        회사에 근무하고있습니다. 함께 다양한 기능들을 작업하던 중 ‘이런 기능들을
-        사용성 좋은 라이브러리로 구축해 놓으면 많은 사람들이 편하고 빠르게
-        작업할 수 있지 않을까?’라는 생각을 하게 되었고, ‘DarkMode Open Source’
-        를 첫 프로젝트로 작업하게 되었습니다!
-      </IntroDesc>
-      <IntroDesc>
-        이 프로젝트는 TypeScript를 사용하였으며, 현재 이 웹은 TypeScript,
-        React를 함께 사용하였습니다.
-      </IntroDesc>
+      <ContentsWrap>
+        <IntroSubTitle>
+          <span className="darkmode-ignore">👉🏻 </span>
+          Add This Code
+        </IntroSubTitle>
+        <CodeSection></CodeSection>
+      </ContentsWrap>
+      <ContentsWrap>
+        <IntroSubTitle>
+          <span className="darkmode-ignore">👉🏻 </span>
+          Setting Options
+        </IntroSubTitle>
+        <CodeInfo>// Button's bottom position</CodeInfo>
+        <CodeSection className="language-html">bottom: "30px", </CodeSection>
+        <CodeInfo>// You can choose between right and left</CodeInfo>
+        <CodeSection>right: "30px",</CodeSection>
+        <CodeSection>left: "unset", </CodeSection>
+        <CodeSection>transitionTime: "0.3s", // Transition Time </CodeSection>
+        <CodeSection>
+          backgroundColor: "#fff", // Light mode background color setting
+        </CodeSection>
+        <CodeSection>
+          buttonDarkColor: "#141414", // Dark mode button color
+        </CodeSection>
+        <CodeSection>
+          buttonLightColor: "#fff", // Light mode button color
+        </CodeSection>
+        <CodeSection>content: "🌓", // Content in button </CodeSection>
+        <CodeSection>
+          saveInCookies: true, // If you want to remember whether it's dark mode
+          or not, write this section true or false
+        </CodeSection>
+        <CodeSection>buttonWidth: "3rem", // Button size</CodeSection>
+        <CodeSection>buttonHeight: "3rem", // Button size</CodeSection>
+      </ContentsWrap>
     </ComponentWrap>
   );
 }
@@ -27,5 +74,16 @@ const ComponentWrap: StyledComponent<"div", DefaultTheme> = styled.div`
   padding: 0 6vw 3vw;
   text-align: left;
 `;
+const IntroSubTitle: StyledComponent<"h2", DefaultTheme> = styled.h2``;
+const CodeSection: StyledComponent<"pre", DefaultTheme> = styled.pre`
+  padding: 0.5vw;
+  background-color: #d4d4d4ca;
+`;
+const CodeInfo: StyledComponent<"span", DefaultTheme> = styled.span`
+  font-size: 80%;
+  font-weight: 600;
+`;
 const IntroTitle: StyledComponent<"h1", DefaultTheme> = styled.h1``;
-const IntroDesc: StyledComponent<"p", DefaultTheme> = styled.p``;
+const ContentsWrap: StyledComponent<"div", DefaultTheme> = styled.div`
+  margin: 2vw;
+`;

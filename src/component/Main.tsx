@@ -5,7 +5,7 @@ import styled, { keyframes } from "styled-components";
 import Darkmode from "@ysms/ts-darkmode";
 
 export default function Main() {
-  const contentsMousehoverHandler = (
+  const contentsMouseHoverHandler = (
     event: React.MouseEvent<HTMLDivElement>
   ) => {
     const contents: HTMLDivElement = event.currentTarget;
@@ -17,30 +17,13 @@ export default function Main() {
     const contents: HTMLDivElement = event.currentTarget;
     contents.style.fontWeight = "500";
   };
-  const circleMousehoverHandler = (event: React.MouseEvent<HTMLDivElement>) => {
-    // const circleImg: HTMLDivElement = event.currentTarget.children;
-    // circleImg.style.width = "15vw";
-    // circleImg.style.height = "15vw";
-  };
-  const circleMouseleaveHandler = (event: React.MouseEvent<HTMLDivElement>) => {
-    // const circleImg: HTMLDivElement = event.currentTarget.children;
-    // circleImg.style.width = "10vw";
-    // circleImg.style.height = "10vw";
-  };
 
   const darkmode = new Darkmode({ content: "🌓" });
   darkmode.showWidget();
-  console.log("test");
   return (
     <ContentsWrap>
       <IconWarp>
-        <ToggleButton
-          onMouseOver={circleMousehoverHandler}
-          onMouseLeave={circleMouseleaveHandler}
-          onClick={() => {
-            console.log("button click");
-          }}
-        >
+        <ToggleButton>
           <ImageCircle></ImageCircle>
         </ToggleButton>
       </IconWarp>
@@ -48,16 +31,16 @@ export default function Main() {
         <ContentsTitle>@ysms/ts-darkmode</ContentsTitle>
         <ContentsDesc>👀 How about change your web to darkmode?</ContentsDesc>
       </ContentsTextWrap>
-      <ConstentsUrlWrap>
+      <ContentsUrlWrap>
         <ContentsDesc
-          onMouseOver={contentsMousehoverHandler}
+          onMouseOver={contentsMouseHoverHandler}
           onMouseLeave={contentsMouseleaveHandler}
         >
           <a href="https://github.com/YunMinSeok/darkmodejs">
             Go to Repositories
           </a>
         </ContentsDesc>
-      </ConstentsUrlWrap>
+      </ContentsUrlWrap>
     </ContentsWrap>
   );
 }
@@ -103,7 +86,7 @@ const ContentsDesc = styled.p`
   }
 `;
 const ContentsTextWrap = styled.div``;
-const ConstentsUrlWrap = styled.div`
+const ContentsUrlWrap = styled.div`
   padding-top: 4vw;
 `;
 
