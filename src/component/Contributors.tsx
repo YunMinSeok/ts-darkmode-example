@@ -11,7 +11,7 @@ export default function Contributors() {
         <ContributorBox>
           <Img src={M} alt="contributors"></Img>
           <Text>
-            <a href="https://github.com/YunMinSeok">@YoonMinSeok</a>
+            <a href="https://github.com/YunMinSeok">@YunMinSeok</a>
           </Text>
           <Text>윤민석</Text>
         </ContributorBox>

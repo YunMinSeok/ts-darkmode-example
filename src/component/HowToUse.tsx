@@ -37,53 +37,117 @@ export default function HowToUse() {
           <span className="darkmode-ignore">👉🏻 </span>
           Add This Code
         </IntroSubTitle>
-        <CodeSection></CodeSection>
+        <CodeSectionWrap>
+          <FontColor4>
+            // This creates a dark mode toggle button on your web.
+          </FontColor4>
+          <CodeSection>
+            <FontColor2>const</FontColor2> darkmode ={" "}
+            <FontColor2>new</FontColor2> Darkmode(
+            {
+              <div>
+                content:{" "}
+                <FontColor2>
+                  "<span className="darkmode-ignore">🌓</span>"
+                </FontColor2>
+              </div>
+            }
+            );
+          </CodeSection>
+          <CodeSection>
+            <FontColor3>darkmode</FontColor3>.
+            <FontColor2>activeDark();</FontColor2>
+          </CodeSection>
+        </CodeSectionWrap>
       </ContentsWrap>
       <ContentsWrap>
         <IntroSubTitle>
           <span className="darkmode-ignore">👉🏻 </span>
           Setting Options
         </IntroSubTitle>
-        <CodeInfo>// Button's bottom position</CodeInfo>
-        <CodeSection className="language-html">bottom: "30px", </CodeSection>
-        <CodeInfo>// You can choose between right and left</CodeInfo>
-        <CodeSection>right: "30px",</CodeSection>
-        <CodeSection>left: "unset", </CodeSection>
-        <CodeSection>transitionTime: "0.3s", // Transition Time </CodeSection>
-        <CodeSection>
-          backgroundColor: "#fff", // Light mode background color setting
-        </CodeSection>
-        <CodeSection>
-          buttonDarkColor: "#141414", // Dark mode button color
-        </CodeSection>
-        <CodeSection>
-          buttonLightColor: "#fff", // Light mode button color
-        </CodeSection>
-        <CodeSection>content: "⭐️", // Content in button </CodeSection>
-        <CodeSection>
-          saveInCookies: true, // If you want to remember whether it's dark mode
-          or not, write this section true or false
-        </CodeSection>
-        <CodeSection>buttonWidth: "3rem", // Button size</CodeSection>
-        <CodeSection>buttonHeight: "3rem", // Button size</CodeSection>
+        <CodeSectionWrap>
+          <CodeSection className="language-html">
+            bottom: <FontColor2>"30px"</FontColor2>,{" "}
+            <FontColor4>// Button's bottom position</FontColor4>
+          </CodeSection>
+
+          <CodeSection>
+            right: <FontColor2>"30px"</FontColor2>,{" "}
+            <FontColor4>// You can choose between right and left</FontColor4>
+          </CodeSection>
+          <CodeSection>
+            left: <FontColor2>"unset"</FontColor2>,{" "}
+            <FontColor4>// You can choose between right and left</FontColor4>{" "}
+          </CodeSection>
+          <CodeSection>
+            transitionTime: <FontColor2>"0.3s"</FontColor2>,{" "}
+            <FontColor4>// Transition Time</FontColor4>
+          </CodeSection>
+
+          <CodeSection>
+            backgroundColor: <FontColor2>"#fff"</FontColor2>,{" "}
+            <FontColor4>// Light mode background color setting</FontColor4>
+          </CodeSection>
+          <CodeSection>
+            buttonDarkColor: <FontColor2>"#141414"</FontColor2>,{" "}
+            <FontColor4>// Dark mode button color</FontColor4>
+          </CodeSection>
+          <CodeSection>
+            buttonLightColor: <FontColor2>"#fff"</FontColor2>,{" "}
+            <FontColor4>// Light mode button color</FontColor4>
+          </CodeSection>
+          <CodeSection>
+            content: "<span className="darkmode-ignore">⭐️</span>",{" "}
+            <FontColor4>// Content in button</FontColor4>
+          </CodeSection>
+          <CodeSection>
+            saveInCookies: <FontColor2>true</FontColor2>,{" "}
+            <FontColor4>
+              // If you want to remember whether it's dark mode or not, write
+              this section true or false
+            </FontColor4>
+          </CodeSection>
+          <CodeSection>
+            buttonWidth: <FontColor2>"3rem"</FontColor2>,{" "}
+            <FontColor4>// Button size</FontColor4>
+          </CodeSection>
+          <CodeSection>
+            buttonHeight: <FontColor2>"3rem"</FontColor2>,{" "}
+            <FontColor4>// Button size</FontColor4>
+          </CodeSection>
+        </CodeSectionWrap>
       </ContentsWrap>
     </ComponentWrap>
   );
 }
+
 const ComponentWrap: StyledComponent<"div", DefaultTheme> = styled.div`
   padding-bottom: 80px;
   text-align: left;
 `;
 const IntroSubTitle: StyledComponent<"h2", DefaultTheme> = styled.h2``;
-const CodeSection: StyledComponent<"pre", DefaultTheme> = styled.pre`
-  padding: 0.5vw;
-  /* background-color: #d4d4d4ca; */
+const CodeSectionWrap: StyledComponent<"div", DefaultTheme> = styled.div`
+  padding: 20px;
+  font-weight: 300;
+  background-color: #f5f2f0;
 `;
-const CodeInfo: StyledComponent<"span", DefaultTheme> = styled.span`
-  font-size: 80%;
-  font-weight: 600;
-`;
+const CodeSection: StyledComponent<"div", DefaultTheme> = styled.div``;
+
 const IntroTitle: StyledComponent<"h1", DefaultTheme> = styled.h1``;
 const ContentsWrap: StyledComponent<"div", DefaultTheme> = styled.div`
-  margin: 2vw;
+  margin: 20px;
+`;
+// font color
+const FontColor1: StyledComponent<"span", DefaultTheme> = styled.span`
+  font-size: 80%;
+  color: #07a;
+`;
+const FontColor2: StyledComponent<"span", DefaultTheme> = styled.span`
+  color: #690;
+`;
+const FontColor3: StyledComponent<"span", DefaultTheme> = styled.span`
+  color: #dd4a68;
+`;
+const FontColor4: StyledComponent<"span", DefaultTheme> = styled.span`
+  color: #708090;
 `;
