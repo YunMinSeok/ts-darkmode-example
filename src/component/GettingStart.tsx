@@ -22,7 +22,7 @@ export default function GettingStarted() {
   );
 }
 const ComponentWrap: StyledComponent<"div", DefaultTheme> = styled.div`
-  padding: 0 6vw 3vw;
+  padding-bottom: 80px;
   text-align: left;
 `;
 const IntroTitle: StyledComponent<"h1", DefaultTheme> = styled.h1``;

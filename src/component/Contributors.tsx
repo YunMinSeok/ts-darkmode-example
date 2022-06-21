@@ -13,25 +13,21 @@ export default function Contributors() {
           <Text>
             <a href="https://github.com/YunMinSeok">@YoonMinSeok</a>
           </Text>
-          <Text>
-            윤민석
-          </Text>
+          <Text>윤민석</Text>
         </ContributorBox>
         <ContributorBox>
           <Img src={Y} alt="contributors"></Img>
           <Text>
             <a href="https://github.com/ChoYeSeul">@ChoYeSeul</a>
           </Text>
-          <Text>
-           조예슬
-          </Text>
+          <Text>조예슬</Text>
         </ContributorBox>
       </ContributorsWrap>
     </ComponentWrap>
   );
 }
 const ComponentWrap: StyledComponent<"div", DefaultTheme> = styled.div`
-  padding: 0 6vw 3vw;
+  padding-bottom: 80px;
   text-align: left;
 `;
 const IntroTitle: StyledComponent<"h1", DefaultTheme> = styled.h1``;

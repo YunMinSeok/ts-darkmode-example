@@ -71,7 +71,7 @@ export default function HowToUse() {
   );
 }
 const ComponentWrap: StyledComponent<"div", DefaultTheme> = styled.div`
-  padding: 0 6vw 3vw;
+  padding-bottom: 80px;
   text-align: left;
 `;
 const IntroSubTitle: StyledComponent<"h2", DefaultTheme> = styled.h2``;
