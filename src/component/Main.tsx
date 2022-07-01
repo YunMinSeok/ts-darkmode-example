@@ -19,7 +19,7 @@ export default function Main() {
   };
 
   const darkmode = new Darkmode({ content: "🌓" });
-  darkmode.showWidget();
+  darkmode.activeDark();
   return (
     <ContentsWrap>
       <IconWarp>
